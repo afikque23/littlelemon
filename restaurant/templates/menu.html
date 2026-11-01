@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="menu-section">
+  <article>
+    <h1>Our Menu</h1>
+    <p class="lead">Explore our selection of traditional Mediterranean meals prepared fresh daily.</p>
+    <div class="menu-list">
+      {% for item in menu.menu %}
+        <div class="menu-card">
+          <div class="menu-card-header">
+            <h3><a href="{% url 'menu_item' pk=item.pk %}">{{ item.name }}</a></h3>
+            <span class="price">${{ item.price }}</span>
+          </div>
+          <p>{{ item.menu_item_description }}</p>
+        </div>
+      {% empty %}
+        <p>No menu items available at this time.</p>
+      {% endfor %}
+    </div>
+  </article>
+</section>
+{% endblock %}

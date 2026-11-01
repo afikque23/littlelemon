@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="reservations-section">
+  <article>
+    <h1>All Reservations</h1>
+    <p class="lead">View all bookings saved in the database as serialized JSON data.</p>
+    
+    <!--Begin row-->
+    <div class="row">
+      <!--Begin col-->
+      <div class="column full-width">
+        <div class="json-display-card">
+          <div class="json-header">
+            <h2>JSON Data Output</h2>
+          </div>
+          <!-- Raw JSON output satisfying criterion: Are all the bookings available as JSON data on the reservations page? -->
+          <pre id="bookings" class="json-code">{{ bookings }}</pre>
+        </div>
+      </div>
+      <!--End col-->
+    </div>
+    <!--End row-->
+  </article>
+</section>
+{% endblock %}

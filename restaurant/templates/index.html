@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="hero-section">
+  <article class="hero-article">
+    <div class="hero-text">
+      <h1>Little Lemon</h1>
+      <h2>Chicago</h2>
+      <p>We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
+      <a href="{% url 'book' %}" class="btn-primary">Reserve a Table</a>
+    </div>
+    <div class="hero-image">
+      <div class="placeholder-card hero-card">
+        <h3>Mediterranean Specialties</h3>
+        <p>Fresh ingredients daily prepared with love by chefs Mario & Adrian.</p>
+      </div>
+    </div>
+  </article>
+</section>
+
+<section class="specials-section">
+  <div class="specials-header">
+    <h2>This Week's Specials!</h2>
+    <a href="{% url 'menu' %}" class="btn-secondary">Online Menu</a>
+  </div>
+  <div class="specials-grid">
+    <div class="special-card">
+      <div class="card-body">
+        <div class="card-title-price">
+          <h3>Greek Salad</h3>
+          <span class="price">$12.99</span>
+        </div>
+        <p>The famous Greek salad of crispy lettuce, peppers, olives, and our Chicago style feta cheese, garnished with crunchy garlic rosemary croutons.</p>
+      </div>
+    </div>
+    <div class="special-card">
+      <div class="card-body">
+        <div class="card-title-price">
+          <h3>Bruschetta</h3>
+          <span class="price">$7.99</span>
+        </div>
+        <p>Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil.</p>
+      </div>
+    </div>
+    <div class="special-card">
+      <div class="card-body">
+        <div class="card-title-price">
+          <h3>Lemon Dessert</h3>
+          <span class="price">$6.99</span>
+        </div>
+        <p>This comes straight from grandma's recipe book, every last ingredient has been sourced and is as authentic as can be imagined.</p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

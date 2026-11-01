@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Little Lemon Restaurant</title>
+  <link rel="stylesheet" href="{% static 'restaurant/css/style.css' %}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Markazi+Text:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header with Little Lemon Branding -->
+  <header>
+    <div class="container nav-container">
+      <a href="{% url 'home' %}" class="logo-link">
+        <div class="logo-box">
+          <span class="logo-title">LITTLE LEMON</span>
+          <span class="logo-sub">MEDITERRANEAN RESTAURANT</span>
+        </div>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+          <li><a href="{% url 'menu' %}">Menu</a></li>
+          <li><a href="{% url 'book' %}">Book</a></li>
+          <li><a href="{% url 'reservations' %}">Reservations</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content Block -->
+  <main class="container">
+    {% block content %}
+    {% endblock %}
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-content">
+      <p>&copy; 2026 Little Lemon. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

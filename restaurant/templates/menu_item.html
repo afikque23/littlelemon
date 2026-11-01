@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="menu-item-section">
+  <article>
+    {% if menu_item %}
+      <h1>{{ menu_item.name }}</h1>
+      <p class="price-tag">Price: ${{ menu_item.price }}</p>
+      <div class="description-box">
+        <p>{{ menu_item.menu_item_description }}</p>
+      </div>
+      <p><a href="{% url 'menu' %}" class="btn-secondary">&larr; Back to Menu</a></p>
+    {% else %}
+      <h1>Item Not Found</h1>
+      <p>The requested menu item could not be found.</p>
+      <p><a href="{% url 'menu' %}" class="btn-secondary">&larr; Back to Menu</a></p>
+    {% endif %}
+  </article>
+</section>
+{% endblock %}
